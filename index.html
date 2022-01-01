@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMobile</title>
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet"
+        href="./assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header" id="header">
+            <div class="grid wide">
+                <div class="header__navbar">
+                    <div class="header__navbar-logo">
+                        <img src="./assets/img/logo.png" alt="logo">
+                    </div>
+
+                    <div class="header__navbar-tool">
+                        <ul class="header__navbar-tool-list">
+                            <a href="">
+                                <li class="header__navbar-tool-item">Home</li>
+                            </a>
+                            <a href="#products">
+                                <li class="header__navbar-tool-item" id="menuTool">Menu
+                                    <ul class="header__navbar-tool-item-list">
+                                        <a href="index.html?type=iphone#products">
+                                            <li class="header__navbar-tool-item-item">Iphone</li>
+                                        </a>
+                                        <a href="index.html?type=samsung#products">
+                                            <li class="header__navbar-tool-item-item">Samsung</li>
+                                        </a>
+                                        <a href="index.html?type=oppo#products">
+                                            <li class="header__navbar-tool-item-item">Oppo</li>
+                                        </a>
+                                    </ul>
+                                </li>
+                            </a>
+                            <a href="#introduce">
+                                <li class="header__navbar-tool-item">About</li>
+                            </a>
+                            <a href="#contacts">
+                                <li class="header__navbar-tool-item">Contacts</li>
+                            </a>
+                            <div class="header__navbar-tool-login">Login</div>
+                            <div class="header__navbar-tool-login-social">Login with Social </div>
+                        </ul>
+                    </div>
+                    <div class="header__navbar-tool-has-login">
+                    </div>
+                    <div class="header__navbar-toolbars" id="toolBars">
+                        <i class="fas fa-grip-horizontal"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="slider" id="slider" style="background-image: url(./assets/img/backgroundIphoneTrue.png);"
+            data-aos="fade-left" data-aos-offset="400" data-aos-duration="1000">
+            <div class="changeSlider">
+            </div>
+
+            <div class="slider__btn">
+                <a href="#products">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="products" id="products">
+            <div class="grid wide">
+                <div class="product__header">
+                    <h1 class="product__heading" data-aos="fade-right">Hot Selling Product</h1>
+                    <div class="product__search">
+                        <div class="search" id="search">
+                            <select name="" id="productType" class="product-type">
+                                <option value="">Type</option>
+                                <option value="iphone">Iphone</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="oppo">Oppo</option>
+                            </select>
+                            <select name="" id="productPrices" class="product-prices">
+                                <option value="">Prices</option>
+                                <option value="rankOne">Max $1000</option>
+                                <option value="rankTwo">$1000 - $2000</option>
+                                <option value="rankThree">Min $2000</option>
+                            </select>
+                            <input type="text" name="search" id="txtsearch" placeholder="Enter name...">
+                            <button class="search-btn">Find</button>
+                        </div>
+                        <i class="fas fa-search" id="isearch"></i>
+                    </div>
+                </div>
+                <div class="products__content" data-aos="fade-left" data-aos-offset="300" data-aos-duration="700">
+                    <div class="row" id="locationRender">
+                    </div>
+
+                    <div class="pagination">
+                        <ul class="pagination__list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="introduce" id="introduce">
+        <div class="grid wide">
+            <h1 class="introduce-heading" data-aos="fade-left">Introduce DMobile</h1>
+            <div class="introduce__content" data-aos="fade-right" data-aos-offset="300" data-aos-duration="700">
+                <div class="introduce__content-img">
+                    <img src="./assets/img/backgroundIntroduce.jpg" alt="backgroundIntroduce">
+                </div>
+
+                <div class="introduce__content-description">
+                    <h2 class="introduce__content-heading">Welcome</h2>
+                    <h1 class="introduce__content-name">Datisekai Mobile</h1>
+                    <p class="introduce__content-desc">
+                        For a long time, technology products have become an indispensable thing for everyone and play an
+                        important role in daily life. Not only that, technology products also show class, are the pride
+                        of users, holding a good product helps you to be more confident in daily life, that's why
+                        Dmobile was created.
+                    </p>
+                    <p id="readmore">With the motto "Technology always accompanies you" along with diverse production
+                        and service packages, DMobile is the perfect choice when you have the need to order technology
+                        products. DMobile team with experience and dedication will bring to customers beautiful, quality
+                        technology products along with the best price and service.</p>
+                    <div class="introduce__content-readmore">
+                        <button id="btnReadMore">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts" id="contacts">
+        <div class="grid wide">
+            <h1 class="contacts-heading" data-aos="fade-right">Contacts DMobile</h1>
+            <div class="contacts__content" data-aos="fade-left" data-aos-offset="300" data-aos-duration="700">
+                <div class="contacts__content-left">
+
+                    <div class="contacts__content-img">
+                        <img src="./assets/img/avt.jpg" alt="">
+                    </div>
+
+                    <div class="contacts__content-social">
+                        <a href="https://www.facebook.com/datisekai/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/datisekai"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.tiktok.com/@datisekai"><i class="fab fa-tiktok"></i></i></a>
+                    </div>
+                </div>
+
+                <div class="contacts__content-right">
+                    <h2>Contacts Form</h2>
+                    <div class="contacts__content-item">
+                        <label for="name">Your Name</label><br>
+                        <input type="text" name="name" id="name" placeholder="Enter your name..." class="contacts-text">
+                    </div>
+
+                    <div class="contacts__content-item">
+                        <label for="email">Your Email</label><br>
+                        <input type="email" name="email" id="email" placeholder="Enter your email..."
+                            class="contacts-text">
+                    </div>
+                    <div class="contacts__content-item">
+                        <label for="message">Your Message</label><br>
+                        <input type="text" name="message" id="message" placeholder="Enter your message..."
+                            class="contacts-text">
+                    </div>
+
+                    <div class="contacts__content-item">
+                        <input type="submit" value="Submit" class="contacts-submit">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="form" id="formLogin">
+        <div class="form__overlay"></div>
+        <div class="form__content">
+            <div class="form__heading">
+                <h2>Login</h2>
+            </div>
+
+            <div class="form__main">
+                <div class="form__main-item">
+                    <label for="">Username</label>
+                    <input type="text" placeholder="Enter usename..." class="form-text" id="usernameLogin">
+                </div>
+                <div class="form__main-item">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter password..." class="form-text" id="passwordLogin">
+                </div>
+
+                <div class="form__main-item">
+                    <input type="button" value="Login" class="login-btn">
+                </div>
+            </div>
+
+            <div class="form__change">
+                <p>Do not have an account? <span id="btnchangeregister">Register</span></p>
+            </div>
+
+            <div class="form__close">
+                <i class="fas fa-window-close"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart">
+        <div class="cart__overlay"></div>
+        <div class="cart__content">
+            <div class="cart__content-shop">
+                <div class="cart__content-shop-header">
+                    <h1>Shopping Cart</h1>
+                    <p id="lengthCart">3 items</p>
+                </div>
+
+                <div class="cart__content-shop-container" id="locationCart">
+                    <div class="cart__content-product">
+                        <div class="cart__content-product-img">
+                            <img src="./assets/img/op1.jpg" alt="">
+                        </div>
+
+                        <div class="cart__content-product-name">
+                            <p>Iphone</p>
+                            <h2>Iphone 13 Pro</h2>
+                        </div>
+
+                        <div class="cart__content-product-quantify">
+                            <i class="fas fa-plus"></i>
+                            <span>1</span>
+                            <i class="fas fa-minus"></i>
+                        </div>
+
+                        <div class="cart__content-product-prices">
+                            <h2><i class="fas fa-dollar-sign"></i>2000</h2>
+                        </div>
+
+                        <div class="cart__content-product-tool">
+                            <i class="fas fa-backspace"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart_content-product-shop-footer">
+                    <p><i class="fas fa-backward"></i>Back to shop</p>
+                </div>
+            </div>
+
+            <div class="cart__content-summary">
+                <div class="cart__content-summary-header">
+                    <h1>Summary</h1>
+                </div>
+
+                <div class="cart__content-summary-container">
+                    <div class="cart__content-summary-info-header">
+                        <h2>Infomation</h2>
+                    </div>
+
+                    <div class="cart__content-summary-info">
+                        <div class="cart__content-info-item">
+                            <label for="">Address</label><br>
+                            <input type="text" name="address" id="address" placeholder="Enter your address...">
+                            <p class="errorAddress"></p>
+                        </div>
+
+                        <div class="cart__content-info-item">
+                            <label for="">Phone number</label><br>
+                            <input type="text" name="phonenumber" id="phonenumber"
+                                placeholder="Enter your phone number...">
+                            <p class="errorPhone"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart__content-summary-footer" id="totalSummary">
+                    <div class="total-product">
+                        <h2>Total prices</h2>
+                        <h3><i class="fas fa-dollar-sign"></i>2000</h3>
+                    </div>
+
+                    <div class="cart__content-checkout">
+                        <button>Check out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order">
+        <div class="order__overlay"></div>
+        <div class="order__content">
+            <div class="order__content-header">
+                <h1>My Order</h1>
+            </div>
+
+            <div class="order__content-container">
+                <div class="order__content-container-title">
+                    <div class="order__content-title-id">
+                        <h3>Order ID</h3>
+                    </div>
+
+                    <div class="order__content-title-date">
+                        <h3>Order Date</h3>
+                    </div>
+
+                    <div class="order__content-title-status">
+                        <h3>Order Status</h3>
+                    </div>
+
+                    <div class="order__content-title-total">
+                        <h3>Order Total</h3>
+                    </div>
+                </div>
+
+                <div class="order__content-container-product" id="locationOrder">
+                </div>
+            </div>
+
+            <div class="order__content-footer">
+                <p><i class="fas fa-backward"></i>Back to shop</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="order__detail">
+
+        <div class="order__detail-header">
+            <h1>Order Detail</h1>
+        </div>
+
+        <div class="order__detail-container" id="locationOrderDetail">
+            <div class="order__detail-product">
+                <div class="order__detail-img">
+                    <img src="./assets/img/ss1.jpg" alt="">
+                </div>
+                <div class="order__detail-name">
+                    <p>Iphone</p>
+                    <h3>Iphone 13 Pro</h3>
+                </div>
+                <div class="order__detail-quantify">
+                    <h3>1</h3>
+                </div>
+
+                <div class="order__detail-prices">
+                    <h3><i class="fas fa-dollar-sign"></i>2000</h3>
+                </div>
+            </div>
+        </div>
+        <div class="order__detail-close">
+            <i class="fas fa-window-close"></i>
+        </div>
+
+    </div>
+
+    <div class="product__info">
+        <div class="product__info-overlay"></div>
+
+        <div class="product__info-content">
+            <h1>Product Detail</h1>
+
+            <div class="product__info-content-main" id="locationProductDetail">
+                <div class="product__info-content-main-img">
+                    <img src="./assets/img/ip3.jpg" alt="">
+                </div>
+
+                <div class="product__info-content-main-detail">
+                    <div class="product__info-content-main-detail-header">
+
+                        <h2 class="product__info-content-main-detail-heading">Infomation</h2>
+                    </div>
+
+                    <div class="product__info-content-main-detail-item">
+                        <h2><i class="fas fa-crown"></i>Iphone</h2>
+                    </div>
+                    <div class="product__info-content-main-detail-item">
+                        <h2><i class="fas fa-mobile"></i>Iphone 13 Pro</h2>
+                    </div>
+                    <div class="product__info-content-main-detail-item">
+                        <h2><i class="fas fa-coins"></i>2000$</h2>
+                    </div>
+
+                    <div class="product__info-add-cart">
+                        <button>Add Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__info-back">
+                <p><i class="fas fa-backward"></i>Back to shop</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbars">
+        <div class="toolbars__logo">
+            <img src="./assets/img/logo.png" alt="">
+        </div>
+
+        <div class="toolbars__content">
+            <ul class="toolbars__list">
+                <a href="#">
+                    <li class="toolbars__list-item">Home</li>
+                </a>
+                <a href="#products">
+                    <li class="toolbars__list-item">Menu</li>
+                </a>
+                <a href="#introduce">
+                    <li class="toolbars__list-item">About</li>
+                </a>
+                <a href="#contacts">
+                    <li class="toolbars__list-item">Contacts</li>
+                </a>
+                <li class="toolbars__list-item" id="mobileLogin"><span>Login</span></li>
+                <li class="toolbars__list-item" id="mobileLoginSocial"><span>Login Social</span></li>
+            </ul>
+        </div>
+
+        <div class="toolbars__close">
+            <i class="fas fa-window-close"></i>
+        </div>
+    </div>
+
+    <div class="login__social">
+        <div class="login__social-overlay"></div>
+        <div class="login__social-content">
+            <div class="login__social-heading">
+                <h2>Login with Social</h2>
+            </div>
+
+            <div class="login__social-main">
+                <div class="login__social-main-item">
+                    <button id="facebookLogin">Login with Facebook</button>
+                </div>
+                <div class="login__social-main-item">
+                    <button id="googleLogin">Login with Google</button>
+                </div>
+            </div>
+
+            <div class="login__social-close">
+                <i class="fas fa-window-close"></i>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
+    <script src="./assets/js/app.js"></script>
+   <script type="module" src="./assets/js/authenGoogle.js"></script>
+   <script type="module" src="./assets/js/authenFacebook.js"></script>
+
+</body>
+
+</html>
